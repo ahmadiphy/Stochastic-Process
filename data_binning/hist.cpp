@@ -100,7 +100,6 @@ void Hist::LogLogBinning(iMatrix &m1)
     ofstream out(nfn.str().c_str(),ios_base::binary);
     for(int i=0;i<limit-1;++i)
     {
-        //out<<m2[1][i]<<" "<<((m2[2][i])/(m2[0][i+1]-m2[0][i]))/SumOfAll<<<<endl;
         double val=(m2[2][i])/(m2[0][i+1]-m2[0][i]);
         out<<m2[1][i]<<" "<<val/nonZ<<endl;
     }
