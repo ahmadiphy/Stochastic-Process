@@ -1,16 +1,9 @@
 
 # coding: utf-8
 
-# In[8]:
-
-
 import random
 from collections import Counter
 import matplotlib.pyplot as plt
-
-
-# In[9]:
-
 
 def b(M,dl):
     myl=[]
@@ -36,31 +29,14 @@ def b_list(mydata):
             resulty.append(bm)
     return [resultx,resulty]
 
-
-# In[24]:
-
-
 random_list=[]
 for x in range(100000):
   random_list.append(random.randint(1,1000))
 
-
-# In[25]:
-
-
 bm=b_list(random_list)
-
-
-# In[27]:
-
 
 p1,=plt.plot(bm[0],bm[1],linestyle='',marker='s')
 plt.show()
 
-
-# In[28]:
-
-
 p2,=plt.loglog(bm[0],bm[1],linestyle='',marker='s')
 plt.show()
-
