@@ -19,15 +19,15 @@ int main()
     const int dir_err = mkdir("data", S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     if (-1 == dir_err)
     {
-        cout<<"Error creating directory"<<endl;
-        cout<<"-------------- No Problem ---------------"<<endl;
+        cout << "Error creating directory" << endl;
+        cout << "-------------- No Problem ---------------" << endl;
     }
     //|========================================================================
     ostringstream fn;
-    fn<<"./data/data_0.dat";//path to time serie
-    iMatrix m1(2,iRow());//integer data
+    fn << "./data/data_0.dat";//path to time serie
+    iMatrix m1(2, iRow());//integer data
     Fread mf1;
-    mf1.Read(fn,m1);//read data file
+    mf1.Read(fn, m1);//read data file
     Hist h1;//hist data
     h1.LogLogBinning(m1);//log log binning and distribution
     h1.Cumulative(m1);//cumulative distribution 
